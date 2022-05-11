@@ -229,6 +229,10 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 992px) {
+    body {
+        height: calc(7 * 70vh + 30vh);
+    }
+
     .wrapper {
         display: block;
         height: calc(7 * 70vh + 30vh);
