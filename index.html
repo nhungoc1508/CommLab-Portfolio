@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngoc's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="script.js" defer></script>
+    <script src="p5.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <h2>Content is loading, thank you for your patience.</h2>
+    </div>
+    <div class="wrapper">
+        <div class="side-panel side-panel-section1" id="side-nav">
+            <div class="side-overlay"></div>
+            <div class="side-content">
+                <ul>
+                    <li class="nav-link-active" id="link-section-1"><a href="#section-1">Welcome</a></li>
+                    <li id="link-section-2"><a href="#section-2">Introduction</a></li>
+                    <li id="link-section-3"><a href="#section-3">30MFF</a></li>
+                    <li id="link-section-4"><a href="#section-4">Comic strip</a></li>
+                    <li id="link-section-5"><a href="#section-5">Sounds</a></li>
+                    <li id="link-section-6"><a href="#section-6">Video</a></li>
+                    <li id="link-section-7"><a href="#section-7">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id="particles"></div>
+            <div class="section" id="section-1">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// Get-to-know-me variables: <span class="variables">name</span>, <span class="variables">country</span>, <span class="variables">class_of</span>, <span class="variables">major</span>, <span class="variables">fav_song</span>, <span class="variables">fav_programming_lang</span></h3>
+                        <h3>// Change the code!</h3>
+                        <input id="input-1" type="text" value="print(greetings)">
+                        <h1 class="output-line">>> <span class="output" id="output-1">'Hello, world!'</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-2">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// What does this site have?</h3>
+                        <input id="input-2" type="text" value="print(commlab_assignments)" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-2">['Looking For New York', 'Overthinking Cat', 'A Guy Talks For Hours', 'CSI: NYU Abu Dhabi']</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-3">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// Assignment 1</h3>
+                        <input id="input-3" type="text" value="print(assignments[0])" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-3">{name: "Looking For New York", prompt: "30MFF Web Site", url: "<a href="https://nhungoc1508.github.io/30MFF/" target="_blank">click_here</a>"}</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-4">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// Assignment 2</h3>
+                        <input id="input-4" type="text" value="print(assignments[1])" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-4">{name: "Overthinking Cat", prompt: "Comix Strip", url: "<a href="https://fyk211.github.io/overthinking_cat/" target="_blank">click_here</a>"}</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-5">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// Assignment 3</h3>
+                        <input id="input-5" type="text" value="print(assignments[2])" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-5">{name: "A Guy Talks For Hours", prompt: "Sounds Like", url: "<a href="https://nicholasraffone.github.io/CommLab-Asg3/" target="_blank">click_here</a>"}</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-6">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// Assignment 4</h3>
+                        <input id="input-6" type="text" value="print(assignments[3])" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-6">{name: "CSI: NYU Abu Dhabi", prompt: "Vid-e-oh!!!", url: "<a href="https://asgomda.github.io/video-assignment/" target="_blank">click_here</a>"}</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section-7">
+                <div class="foreground">
+                    <div class="foreground-content">
+                        <h3>// How to find me</h3>
+                        <input id="input-7" type="text" value="print(contacts)" name="">
+                        <h2 class="output-line">>> <span class="output" id="output-7">[<a href="https://github.com/nhungoc1508", target="_blank">github</a>, <a href="https://www.linkedin.com/in/ngocnhoang/", target="_blank">linkedin</a>, <a href="mailto:ngoc.hoang@nyu.edu" target="_blank">email</a>]</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
