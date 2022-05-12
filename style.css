@@ -18,17 +18,43 @@ a {
     color: white;
 }
 
+#img-preload {
+    /* display: hidden;  */
+    /* height: 1px;
+    overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
 #loading {
-    background: linear-gradient(to top, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2944&q=80");
+    background-color: black!important;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover!important;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2944&q=80");
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 10;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    opacity: 1;
+    transition: all 1s;
+}
+
+#backdrop {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
     display: grid;
     justify-content: center;
     align-content: center;

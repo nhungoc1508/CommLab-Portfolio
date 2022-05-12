@@ -1,16 +1,58 @@
+// Source: https://stackoverflow.com/questions/48987395/check-if-all-the-images-in-the-page-are-loaded
+function onImagesLoaded(container, event) {
+    var images = container.getElementsByTagName("img");
+    var loaded = images.length;
+    for (var i = 0; i < images.length; i++) {
+        if (images[i].complete) {
+            loaded--;
+        }
+        else {
+            images[i].addEventListener("load", function() {
+                loaded--;
+                if (loaded == 0) {
+                    event();
+                }
+            });
+        }
+        if (loaded == 0) {
+            event();
+        }
+    }
+}
+
+var container = document.getElementById("img-preload");
+
+onImagesLoaded(container, function() {
+    container.classList.add("hidden");
+    let loading_screen = document.querySelector("#loading");
+    let backdrop = document.querySelector("#backdrop");
+
+    setTimeout(() => {
+        loading_screen.style.opacity = 0;
+        backdrop.style.opacity = 0;
+    }, 2000);
+
+    setTimeout(() => {
+        document.body.style.height = '700vh';
+        document.body.style.overflow = 'scroll';
+        loading_screen.classList.add("hidden");
+        backdrop.classList.add("hidden");
+    }, 3000);
+});
+
 const num_sections = 7;
 
-let loading_screen = document.querySelector("#loading");
+// let loading_screen = document.querySelector("#loading");
 
-setTimeout(() => {
-    loading_screen.style.opacity = 0;
-}, 2000);
+// setTimeout(() => {
+//     loading_screen.style.opacity = 0;
+// }, 2000);
 
-setTimeout(() => {
-    document.body.style.height = '700vh';
-    document.body.style.overflow = 'scroll';
-    loading_screen.classList.add("hidden");
-}, 3000);
+// setTimeout(() => {
+//     document.body.style.height = '700vh';
+//     document.body.style.overflow = 'scroll';
+//     loading_screen.classList.add("hidden");
+// }, 3000);
 
 let input1 = document.querySelector("#input-1");
 let input_len = input1.value.length
