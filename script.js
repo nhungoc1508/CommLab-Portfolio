@@ -1,3 +1,4 @@
+// Images pre-loading
 // Source: https://stackoverflow.com/questions/48987395/check-if-all-the-images-in-the-page-are-loaded
 function onImagesLoaded(container, event) {
     var images = container.getElementsByTagName("img");
@@ -42,20 +43,11 @@ onImagesLoaded(container, function() {
 
 const num_sections = 7;
 
-// let loading_screen = document.querySelector("#loading");
 
-// setTimeout(() => {
-//     loading_screen.style.opacity = 0;
-// }, 2000);
-
-// setTimeout(() => {
-//     document.body.style.height = '700vh';
-//     document.body.style.overflow = 'scroll';
-//     loading_screen.classList.add("hidden");
-// }, 3000);
-
+// The code for all inputs & outputs are the same, I could do with better modularizing ...
 let input1 = document.querySelector("#input-1");
 let input_len = input1.value.length
+// Make the typing cursor appear at the end of the code line
 input1.focus();
 input1.setSelectionRange(input_len, input_len);
 
@@ -71,6 +63,7 @@ const commands_1 = {
 
 const commands_keys = Object.keys(commands_1);
 
+// If the input changes in any way -> change output accordingly
 let output1 = document.querySelector("#output-1");
 input1.addEventListener("input", (event) => {
     let new_input = input1.value.slice(6).replace(')', '');
@@ -189,6 +182,7 @@ input7.addEventListener("input", (event) => {
     }, 50);
 })
 
+// Change the background image + highlighted nav tab on the side nav as the user scrolls
 const side_panel = document.querySelector("#side-nav");
 
 window.addEventListener("scroll", function (event) {
